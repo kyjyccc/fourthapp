@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">fourthapp</string>
+    <string name="edit_text1">Input RMB</string>
+    <string name="text1">Hello</string>
+    <string name="button1">DOLLAR</string>
+    <string name="button2">EURO</string>
+    <string name="button3">WON</string>
+    <string name="button4">Config</string>
+    <string name="button5">Save</string>
+
+    <string name="menu_1_label">settings</string>
+</resources>
