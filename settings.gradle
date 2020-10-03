@@ -1,2 +1,6 @@
+include ':javaprj'
+include ':lib'
+include ':lib1'
+include ':lib'
 include ':app'
 rootProject.name = "fourthapp"

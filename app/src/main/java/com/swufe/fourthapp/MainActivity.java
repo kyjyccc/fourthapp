@@ -1,6 +1,9 @@
 package com.swufe.fourthapp;
 
+import android.app.Activity;
 import android.content.Intent;
+import android.content.SharedPreferences;
+import android.preference.PreferenceManager;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
@@ -15,7 +18,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     EditText inp;
     TextView out;
     private Button button1,button2,button3,button4;
-    Double dollarRate = 0.1477,euroRate = 0.1256,wonRate = 171.3421;
+    float dollarRate = 0.1477f,euroRate = 0.1256f,wonRate = 171.3421f;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -47,16 +50,37 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         second.putExtra("euro_rate_key",euroRate);
         second.putExtra("won_rate_key",wonRate);
 
-        Log.i(TAG,"openOne:dollarRate=" + dollarRate) ;
+        Log.i(TAG,"openOne:dollarRate=" + dollarRate);
         Log.i(TAG,"openOne:euroRate=" + euroRate);
         Log.i(TAG,"openOne:wonRate=" + wonRate);
 
         startActivity(second);
+
+        //数据保存
+        SharedPreferences sharedPreferences = getSharedPreferences("myrate", Activity.MODE_PRIVATE);
+
+        PreferenceManager.getDefaultSharedPreferences(this);
+
+        dollarRate = sharedPreferences.getFloat("dollar_rate",0.0f);
+        euroRate = sharedPreferences.getFloat("euro_rate",0.0f);
+        wonRate = sharedPreferences.getFloat("won_rate",0.0f);
+
+        //修改保存内容
+        SharedPreferences sp = getSharedPreferences("myrate",Activity.MODE_PRIVATE);
+
+        SharedPreferences.Editor editor = sp.edit();
+        editor.putFloat("dollar_rate",dollarRate);
+        editor.putFloat("euro_rate",euroRate);
+        editor.putFloat("won_rate",wonRate);
+        editor.apply();
+
+
+
     }
 
-    public void transform(Double Rate){
-        Double a = Double.parseDouble(inp.getText().toString());
-        Double b = a * Rate;
+    public void transform(float Rate){
+        float a = Float.parseFloat(inp.getText().toString());
+        float b = a * Rate;
         String str = String.valueOf(b);
         out.setText("汇率转换的结果为：" + str);
     }
