@@ -20,7 +20,7 @@ import java.io.Reader;
 import java.net.MalformedURLException;
 
 public class MainActivity2 extends AppCompatActivity {
-    private static final String TAG = "MainActivity";
+    private static final String TAG = "MainActivity2";
     EditText out1,out2,out3;
     Handler handler;
 
