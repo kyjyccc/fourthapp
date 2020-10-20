@@ -79,7 +79,7 @@ public class RateListActivity extends ListActivity implements Runnable {
             Log.i(TAG,"onCreate:the new_date=" + newdate);
             //开启子线程
             Thread t1 = new Thread(this);
-            t.start();
+            t1.start();
             //线程间消息同步
             handler = new Handler() {
                 @Override
