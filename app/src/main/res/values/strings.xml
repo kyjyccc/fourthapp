@@ -8,5 +8,9 @@
     <string name="button4">Config</string>
     <string name="button5">Save</string>
 
+    <string name="edit_text2">Celsius</string>
+    <string name="button6">transform</string>
+    <string name="text2">Fahrenheit</string>
+
     <string name="menu_1_label">settings</string>
 </resources>
