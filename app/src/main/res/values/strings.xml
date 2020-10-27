@@ -12,5 +12,17 @@
     <string name="button6">transform</string>
     <string name="text2">Fahrenheit</string>
 
+    <string name="text3">TeamA</string>
+    <string name="text4">TeamB</string>
+    <string name="text5">0</string>
+    <string name="text6">0</string>
+    <string name="button7">+3 POINTS</string>
+    <string name="button8">+2 POINTS</string>
+    <string name="button9">FREE THROW</string>
+    <string name="button10">+3 POINTS</string>
+    <string name="button11">+2 POINTS</string>
+    <string name="button12">FREE THROW</string>
+    <string name="button13">RESET</string>
+
     <string name="menu_1_label">settings</string>
 </resources>
